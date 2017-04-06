@@ -124,5 +124,6 @@ class MainSpec extends FlatSpec with Matchers with OptionValues with Inspectors 
       run("--fix-filename-duplicates-preferring tree")
     }
   }
+ */
 }
 
