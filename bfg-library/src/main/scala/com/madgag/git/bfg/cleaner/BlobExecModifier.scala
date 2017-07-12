@@ -27,7 +27,7 @@ trait BlobExecModifier extends TreeBlobModifier {
 
     println(s"idFromStream=$idFromStream")
     val newFile = new String(idFromStream._2.open(threadLocalObjectDBResources.reader()).getBytes)
-    println(s"newFile=$newFile")
+    // println(s"newFile=$newFile")  // RBM ... 12-Jul-2017
 
     idFromStream
   }
