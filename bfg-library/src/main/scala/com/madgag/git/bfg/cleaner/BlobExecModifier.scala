@@ -19,14 +19,14 @@ trait BlobExecModifier extends TreeBlobModifier {
   val threadLocalObjectDBResources: ThreadLocalObjectDatabaseResources
 
   def fix(entry: TreeBlobEntry) = {
-    println(s"Starting BlobExecModifier with '$command' on "+entry)
+    //println(s"Starting BlobExecModifier with '$command' on "+entry)  // RBM ... 06-Dec-2017
 //    val idFromFile = operateOnFileFrom(entry)
 //    println(s"idFromFile=$idFromFile")
 
     val idFromStream= operateOnStreamFrom(entry).withoutName
 
-    println(s"idFromStream=$idFromStream")
-    val newFile = new String(idFromStream._2.open(threadLocalObjectDBResources.reader()).getBytes)
+    //println(s"idFromStream=$idFromStream")  // RBM ... 06-Dec-2017
+    //val newFile = new String(idFromStream._2.open(threadLocalObjectDBResources.reader()).getBytes)  // RBM ... 06-Dec-2017
     // println(s"newFile=$newFile")  // RBM ... 12-Jul-2017
 
     idFromStream
